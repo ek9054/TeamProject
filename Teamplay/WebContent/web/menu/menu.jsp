@@ -8,6 +8,7 @@
    
 </head>
 <body>
+<center>
   <div class="navbar navbar-inverse">
 		  <div class="navbar-inner">
 		    <div class="container">
@@ -88,7 +89,7 @@
         </a>
        </li>
       </ul> -->
-   <!-- <table border=0 width=500>
+   <table border=0 width=500>
     <tr>
      <td align=center>
       <a href=""><img src="web/image/1955fire.png" border=0 width=300>&nbsp;B&B 파이어</a></td>
@@ -116,8 +117,7 @@
       <a href=""><img src="web/image/tomatocheese.png" border=0 width=300>&nbsp;토마토 치즈</a></td>
      
     </tr>
-   </table> -->
-   <script src="http://code.jquery.com/jquery-latest.js"></script>
-   <script src="js/bootstrap.js"></script>
+   </table>
+  </center>
 </body>
 </html>
