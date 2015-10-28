@@ -19,28 +19,28 @@
 			<tr>
 				<td width=20%><p class=your-para>아이디</p></td>
 				<td width=80% align=left class="send" >
-					<input type=text name=id size=16>
-					<input type=button name=idcheck value=중복체크 >
+					<input type=text name=id size=16 class="form-control">
+					<input type=button name=idcheck value=중복체크 class="btn btn-default">
 				</td>
 				
 			</tr>
 			<tr>
 				<td width=20%><p class=your-para>비밀번호</p></td>
 				<td width=80% align=left>
-					<input type=password name=pwd size=30>
+					<input type=password name=pwd size=30 class="form-control">
 					
 				</td>
 			</tr>
 			<tr>
 				<td width=20%><p class=your-para></p></td>
 				<td width=80%align=left>
-					<input type=password name=pwd2 size=30 placeholder=재입력>
+					<input type=password name=pwd2 size=30 placeholder=재입력 class="form-control">
 				</td>
 			</tr>
 			<tr>
 				<td width=20%><p class=your-para>이름</p></td>
 				<td width=80% align=left>
-					<input type=text name=name size=12>
+					<input type=text name=name size=12 class="form-control">
 				</td>
 			</tr>
 			<tr>
@@ -52,23 +52,23 @@
 			<tr>
 				<td width=30%><p class=your-para>성별</p></td>
 				<td width=70% align=left>
-					<input type=radio name=sex value=남자 checked>남자
+				<input type=radio name=sex value=남자 checked>남자
 					<input type=radio name=sex value=여자 >여자
 				</td>
 			</tr>
 			<tr>
 				<td width=20%><p class=your-para>우편번호</p></td>
 				<td width=80% align=left>
-					<input type=text id="userpost" name="post" readonly size=10>
-					<input type=button value="우편번호 검색" name=postfind>
+					<input type=text id="userpost" name="post"  size=10 class="form-control">
+					<input type=button value="우편번호 검색" name=postfind class="btn btn-default">
 					
 				</td>
 			</tr>
 			<tr>
 				<td width=20%><p class=your-para>주소</p></td>
 				<td>
-					<input type=text id="useraddr1" name="addr1" readonly size=30>
-					<input type=text id="useraddr2" name="addr2" size=30>
+					<input type=text id="useraddr1" name="addr1" size=30 class="form-control">
+					<input type=text id="useraddr2" name="addr2" size=30 class="form-control">
 				</td>
 			</tr>
 			<tr>
@@ -79,14 +79,14 @@
 						<option>011</option>
 						<option>017</option>
 					</select>
-					<input type=text id="usertel2" name="tel2" size=10>-
-					<input type=text id="usertel3" name="tel3" size=10>
+					<input type=text id="usertel2" name="tel2" size=10 class="form-control">-
+					<input type=text id="usertel3" name="tel3" size=10 class="form-control">
 				</td>
 			</tr>
 			<tr>
 				<td width=20%><p class=your-para>이메일</p></td>
 				<td width=80% align=left>
-					<input type=text name=email size=30>
+					<input type=text name=email size=30 class="form-control">
 				</td>
 			</tr>
 			<tr>
