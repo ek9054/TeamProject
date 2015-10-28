@@ -9,13 +9,13 @@
 	<center>
 		<div class="container">
 			<div>
-				<img src="images/main1.jpg">
+				<img src="web/images/main1.jpg">
 			</div>
 
 			<br>
 			<div class="container">
 				<h2 align=left>BREAK BURGER 이용 방법</h2>
-				<img src="images/howto2.jpg">
+				<img src="web/images/howto.jpg">
 			</div>
 		</div>
 		
