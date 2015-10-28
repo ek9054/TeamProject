@@ -1,38 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
-<link href="../css/bootstrap.css" rel='stylesheet' type='text/css' />
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="../js/jquery.min.js"></script>
-<!-- Custom Theme files -->
-<link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
-<!-- Custom Theme files -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Fitness Zone Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!--webfont-->
-<link href='//fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
-<!--/script-->
-<script type="text/javascript">
-			jQuery(document).ready(function($) {
-				$(".scroll").click(function(event){		
-					event.preventDefault();
-					$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
-				});
-			});
-</script>
-
-<!-- for bootstrap working -->
-		<script src="js/bootstrap.js"></script>
 </head>
 <body>
 	<form method=post action="">
@@ -45,15 +17,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		
 		<table border=0 width=350 height=400>
 			<tr>
-				<td width=20%><p class=your-para>¾ÆÀÌµğ</p></td>
+				<td width=20%><p class=your-para>ì•„ì´ë””</p></td>
 				<td width=80% align=left class="send" >
 					<input type=text name=id size=16>
-					<input type=button name=idcheck value=Áßº¹Ã¼Å© >
+					<input type=button name=idcheck value=ì¤‘ë³µì²´í¬ >
 				</td>
 				
 			</tr>
 			<tr>
-				<td width=20%><p class=your-para>ºñ¹Ğ¹øÈ£</p></td>
+				<td width=20%><p class=your-para>ë¹„ë°€ë²ˆí˜¸</p></td>
 				<td width=80% align=left>
 					<input type=password name=pwd size=30>
 					
@@ -62,45 +34,45 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<tr>
 				<td width=20%><p class=your-para></p></td>
 				<td width=80%align=left>
-					<input type=password name=pwd2 size=30 placeholder=ÀçÀÔ·Â>
+					<input type=password name=pwd2 size=30 placeholder=ì¬ì…ë ¥>
 				</td>
 			</tr>
 			<tr>
-				<td width=20%><p class=your-para>ÀÌ¸§</p></td>
+				<td width=20%><p class=your-para>ì´ë¦„</p></td>
 				<td width=80% align=left>
 					<input type=text name=name size=12>
 				</td>
 			</tr>
 			<tr>
-				<td width=20%><p class=your-para>»ı³â¿ùÀÏ</p></td>
+				<td width=20%><p class=your-para>ìƒë…„ì›”ì¼</p></td>
 				<td width=80% align=left>
 					<input type=date name="bday">
 				</td>
 			</tr>
 			<tr>
-				<td width=30%><p class=your-para>¼ºº°</p></td>
+				<td width=30%><p class=your-para>ì„±ë³„</p></td>
 				<td width=70% align=left>
-					<input type=radio name=sex value=³²ÀÚ checked>³²ÀÚ
-					<input type=radio name=sex value=¿©ÀÚ >¿©ÀÚ
+					<input type=radio name=sex value=ë‚¨ì checked>ë‚¨ì
+					<input type=radio name=sex value=ì—¬ì >ì—¬ì
 				</td>
 			</tr>
 			<tr>
-				<td width=20%><p class=your-para>¿ìÆí¹øÈ£</p></td>
+				<td width=20%><p class=your-para>ìš°í¸ë²ˆí˜¸</p></td>
 				<td width=80% align=left>
 					<input type=text id="userpost" name="post" readonly size=10>
-					<input type=button value="¿ìÆí¹øÈ£ °Ë»ö" name=postfind>
+					<input type=button value="ìš°í¸ë²ˆí˜¸ ê²€ìƒ‰" name=postfind>
 					
 				</td>
 			</tr>
 			<tr>
-				<td width=20%><p class=your-para>ÁÖ¼Ò</p></td>
+				<td width=20%><p class=your-para>ì£¼ì†Œ</p></td>
 				<td>
 					<input type=text id="useraddr1" name="addr1" readonly size=30>
 					<input type=text id="useraddr2" name="addr2" size=30>
 				</td>
 			</tr>
 			<tr>
-				<td width=20%><p class=your-para>ÀüÈ­¹øÈ£</p></td>
+				<td width=20%><p class=your-para>ì „í™”ë²ˆí˜¸</p></td>
 				<td width=80% align=left>
 				<select id="usertel" name="tel1">
 						<option>010</option>
@@ -112,7 +84,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</td>
 			</tr>
 			<tr>
-				<td width=20%><p class=your-para>ÀÌ¸ŞÀÏ</p></td>
+				<td width=20%><p class=your-para>ì´ë©”ì¼</p></td>
 				<td width=80% align=left>
 					<input type=text name=email size=30>
 				</td>
@@ -120,7 +92,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<tr>
 				<td class="send" colspan=3 align=center >
 					<br>
-					<input type="submit" value=°¡ÀÔÇÏ±â >
+					<input type="submit" value=ê°€ì…í•˜ê¸° >
 				</td>
 			</tr>
 		</table>

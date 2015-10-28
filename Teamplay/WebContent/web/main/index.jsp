@@ -27,15 +27,35 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="web/js/move-top.js"></script>
 <script type="text/javascript" src="web/js/easing.js"></script>
-<!--/script-->
 <script type="text/javascript">
-			jQuery(document).ready(function($) {
-				$(".scroll").click(function(event){		
-					event.preventDefault();
-					$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
-				});
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop : $(this.hash).offset().top
+				}, 900);
 			});
-			
+		});
+		$(function() {
+			// onclick
+			//var id=$('#id').val("admin");	// val() : 값 읽어들이기 , val("값") 값 넣기  / #id .class 태그명 (셀렉터).val()
+			$('#logBtn').click(function() {
+				var id = $('#id').val();
+				if (id == "") {
+					$('#logPrint').text("ID를 입력하세요");
+					$('#id').focus();
+					return;
+				}
+				var pwd = $('#pwd').val();
+				if (pwd == "") {
+					$('#logPrint').text("Password를 입력하세요");
+					$('#pwd').focus();
+					return;
+				}
+
+				$('frm').submit();
+			});
+		});
 </script>
 <style type="text/css">
 
@@ -46,18 +66,24 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </head>
 <body>
 	<!--  login -->
-	<!--  login -->
-   <div align=right style="margin-right: 30px; margin-top: 30px; font-size: 12px"    >
-      <span> ID </span>
-       <input type="text" name=id class="form-control"
-         placeholder="@email.com" size=14> <span>PWD</span>
-          <input type="text" name=pwd class="form-control" placeholder="password" size=8>
+	<div class="container">
+		<div align=right
+			style="margin-right: 30px; margin-top: 30px; font-size: 12px">
+			<span> ID </span> 
+			<input type="text" name=id id="id" class="form-control"
+				placeholder="@email.com" size=14> 
+			<span>PWD</span> 
+			<input type="text" name=pwd id="pwd" class="form-control" placeholder="password" size=8>
 
-      <button class="btn btn-default" type="button">로그인</button>
-      <a href="index.jsp?no=5" style="color: black;">
-         <button class="btn btn-default" type="button">회원가입</button>
-      </a>
-   </div>
+			<button class="btn btn-default" type="button" id="logBtn">로그인</button>
+			<a href="join.do" style="color: black;">
+				<button class="btn btn-default" type="button">회원가입</button>
+			</a>
+		</div>
+		<div align=right style="margin-right: 30px">
+			<span id="logPrint" ></span>
+		</div>
+	</div>
 	<!-- header-section-starts -->	
 			<div class="header-top">
 			<div class="logo text-center">
