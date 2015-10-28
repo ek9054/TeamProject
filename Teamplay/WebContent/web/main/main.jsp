@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -43,30 +43,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div>
 		<img src="web/images/main1.jpg">
 	</div>
-		<!-- <div class="panel panel-home-masthead panel-home-masthead-login">
 
-			<div class="panel panel-home-masthead panel-home-masthead-login">
-				<div class="panel-heading">
-					<h2>嚥∽옙域밸�占쏙옙</h2>
-				</div>
-				<table border=0 width=200 height=200>
-					<tr>
-						<td width=30% align=center>占쏙옙占쎈��占쏙옙</td>
-						<td width=70% align=left><input type=text size=12></td>
-						
-					</tr>
-					<tr>
-						<td width=30% align=center>��占썼�占썼린占쏙옙占�</td>
-						<td width=70% align=left><input type=password size=12></td>
-					</tr>
-					<tr>
-						<td colspan="2" align=center class="send">
-							<input type=submit value=Login>
-						</td>
-					</tr>
-				</table>
-			</div>
-		</div> -->
 		<br>
 		<div class="container">
 			<br>
