@@ -6,12 +6,8 @@
     <servlet-class>com.controller.DispatcherServlet</servlet-class>
     <init-param>
       <param-name>xmlPath</param-name>
-
-      <param-value>C:\Users\sist\Git\Teamplay\Teamplay\WebContent\WEB-INF\applicationContext.xml</param-value><!-- 은국 -->
-
-      <!-- <param-value>C:\webDev\webStudy\Teamplay\WebContent\WEB-INF\applicationContext.xml</param-value> -->
-    <!--   <param-value>C:\Users\sist\git\TeamProject\Teamplay\WebContent\WEB-INF\applicationContext.xml</param-value> -->
-
+	  <!-- 여기다가 경로 설정하고 지우고 올리기 !!!!!!!! -->
+	  <param-value></param-value>
     </init-param>
   </servlet>
   <servlet-mapping>
