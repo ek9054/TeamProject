@@ -5,9 +5,8 @@
     <servlet-name>mvc</servlet-name>
     <servlet-class>com.controller.DispatcherServlet</servlet-class>
     <init-param>
-      <param-name>xmlPath</param-name>
-	  <!-- 여기다가 경로 설정하고 지우고 올리기 !!!!!!!! -->
-	  <param-value></param-value>
+      	<param-name>xmlPath</param-name>
+		<param-value></param-value>
     </init-param>
   </servlet>
   <servlet-mapping>
