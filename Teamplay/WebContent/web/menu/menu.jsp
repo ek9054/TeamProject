@@ -5,6 +5,23 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="web/shadow/css/shadowbox.css"/>
+<script type="text/javascript" src="web/shadow/js/shadowbox.js"></script>
+<script type="text/javascript">
+Shadowbox.init({
+	players:["iframe"]
+});
+function nutirition()
+{
+	Shadowbox.open({
+		content:'web/menu/nutrition.jsp',
+		player:'iframe',
+		title:'영양정보',
+		width:800,
+		height:500
+	});
+}
+</script>
 </head>
 <body>
  <center>
@@ -37,6 +54,10 @@
       <a href=""><img src="web/image/tomatocheese.png" border=0 width=300>&nbsp;토마토 치즈</a></td>
      
     </tr>
+    <tr>
+      <buttton value="영양정보" onclick="nutirition()" ><img src="web/images/info.jpg" width=50 height=50></buttton>
+   
+   </tr>
    </table>
  </center>
 </body>
