@@ -8,6 +8,33 @@
 <link rel="stylesheet" type="text/css" href="web/shadow/css/shadowbox.css"/>
 <script type="text/javascript" src="web/shadow/js/shadowbox.js"></script>
 <script type="text/javascript">
+var httpRequest=null;
+function createHttpRequest(){
+	if(window.ActiveXObject){
+		return new ActiveXObject("Msxml2.XMLHTTP");
+	}
+	else if(window.XMLHttpRequest){
+		return new XMLHttpRequest();
+	}
+	else {
+		return null;
+	}
+}
+function sendMessage(tno){
+	httpRequest=createHttpRequest();
+	httpRequest.open("GET", "web/menu/material.jsp?tno="+tno, true);
+	httpRequest.onreadystatechange=result;
+	httpRequest.send(null);
+}
+function result(){
+	if(httpRequest.readyState==4){
+		if(httpRequest.status==200){
+			var div=document.getElementById("materialPrint");
+			//alert(httpRequest.responseText);
+			div.innerHTML=httpRequest.responseText;
+		}
+	}
+}
 Shadowbox.init({
 	players:["iframe"]
 });
@@ -25,7 +52,21 @@ function nutirition()
 </head>
 <body>
  <center>
-  <h3>Menu</h3>
+  
+  <h3>버거만들기</h3>
+  <p>
+		<input type=button value="기존버거" onclick="sendMessage(10)">
+		<input type=button value="step1. 번 선택하기" onclick="sendMessage(20)">
+		<input type=button value="step2. 패티 선택하기" onclick="sendMessage(30)">
+		<input type=button value="step3. 치즈 더하기" onclick="sendMessage(40)">
+		<input type=button value="step4. 채소 추가하기" onclick="sendMessage(50)">
+		<input type=button value="step5. 소스 선택하기" onclick="sendMessage(60)">
+		<input type=button value="step6. 프리미엄 토핑하기" onclick="sendMessage(70)">
+		
+		<p>
+		
+		<div id="materialPrint"></div>
+  <p>
    <table border=0 width=500>
     <tr>
      <td align=center>
@@ -55,9 +96,9 @@ function nutirition()
      
     </tr>
     <tr>
-      <buttton value="영양정보" onclick="nutirition()" ><img src="web/images/info.jpg" width=50 height=50></buttton>
-   
-   </tr>
+    	
+    	  <buttton value="영양정보" onclick="nutirition()" ><img src="web/images/info.jpg" width=50 height=50></buttton>
+   	</tr>
    </table>
  </center>
 </body>
