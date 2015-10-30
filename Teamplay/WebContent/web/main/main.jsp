@@ -17,7 +17,7 @@
 			<br>
 			<div class="container">
 				<h2 align=left>BREAK BURGER 이용 방법</h2>
-				<img src="web/images/howto.jpg">
+				<img src="web/images/howto2.jpg">
 			</div>
 		</div>
 		
