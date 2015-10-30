@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
 <html>
 <head>
     <meta charset="utf-8">
@@ -7,7 +10,8 @@
 .map_wrap, .map_wrap * {margin:0;padding:0;font-family:'Malgun Gothic',dotum,'돋움',sans-serif;font-size:12px;}
 .map_wrap a, .map_wrap a:hover, .map_wrap a:active{color:#000;text-decoration: none;}
 .map_wrap {position:relative;width:100%;height:500px;}
-#menu_wrap {position:relative;width:250px;margin:10px 0 30px 10px;padding:5px;overflow-y:auto;background:rgba(255, 255, 255, 0.7);font-size:12px;border-radius: 10px;}
+/*#menu_wrap {position:relative;width:250px;margin:10px 0 30px 10px;padding:5px;overflow-y:auto;background:rgba(255, 255, 255, 0.7);font-size:12px;border-radius: 10px;}*/ 
+#menu_wrap {position:absolute;top:0;left:0;bottom:0;width:250px;margin:10% 10% 10% 75%;padding:5px;overflow-y:auto;background:rgba(255, 255, 255, 0.7);z-index: 1;font-size:12px;border-radius: 10px;}
 .bg_white {background:#fff;}
 #menu_wrap hr {display: block; height: 1px;border: 0; border-top: 2px solid #5F5F5F;margin:3px 0;}
 #menu_wrap .option{text-align: center;}
@@ -44,21 +48,25 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
 <body>
-
+<div class="container">
 <div class="map_wrap">
         <div class="option">
             <p>
                 <form onsubmit="searchPlaces(); return false;">
-                키워드 : <input type="text" value="" id="keyword" size="15"> 
-                <button type="submit">검색하기</button> 
-            </p>
-        </div><br><br>
-    <div id="map" style="width:50%;height:80%;position:relative;overflow:hidden; float: left"></div>
-
-    <div id="menu_wrap" class="bg_white" style="float: left;">
+               매장검색 : <input type="text" class="form-control" value="" id="keyword" style="width:30%;" placeholder="동/읍/면/리"> 
+                <button type="submit" class="form-control">매장찾기</button>  </div><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;검색 안내 : 매장명, 동명, 도로명을 검색해주세요.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;검색 예시 : 을지로 1가, 창천동 / 남대문로, 연세로 / 서울시청점, 연세대점
+            </p><br>
+       
+    <div id="map" style="width:70%;height:80%;position:relative;overflow:hidden;"></div>
+   
+    <div id="menu_wrap" class="bg_white">
+       
         <ul id="placesList"></ul>
         
         <div id="pagination"></div>
+        </div>
     </div>
 </div>
 
@@ -91,8 +99,8 @@ searchPlaces();
 function searchPlaces() {
 
     var keyword = document.getElementById('keyword').value;
-       if(keyword!='')
-      keyword = keyword+"파파이스";
+     if(keyword!='')
+     keyword = keyword+" 파파이스";
       /*  if (!keyword.replace(/^\s+|\s+$/g, '')) {
            alert('키워드를 입력해주세요!');
            return false;
@@ -163,7 +171,18 @@ function displayPlaces(places) {
             daum.maps.event.addListener(marker, 'mouseout', function() {
                 infowindow.close();
             });
-
+            
+            //마커에 클릭 이벤트를 등록한다 (우클릭 : rightclick)
+        	daum.maps.event.addListener(marker, 'click', function() {
+        	    var bCheck=confirm('이 매장으로 예약하시겠습니까?');
+        	if(bCheck)
+        	{
+        			 	alert(title.substring(title.lastIndexOf(' '),title.length));
+        			 	
+        	}
+        	
+        	});
+          
             itemEl.onmouseover =  function () {
                 displayInfowindow(marker, title);
             };
@@ -171,10 +190,13 @@ function displayPlaces(places) {
             itemEl.onmouseout =  function () {
                 infowindow.close();
             };
+            
+            
         })(marker, places[i].title);
 
         fragment.appendChild(itemEl);
     }
+    
 
     // 검색결과 항목들을 검색결과 목록 Elemnet에 추가합니다
     listEl.appendChild(fragment);
@@ -228,8 +250,10 @@ function addMarker(position, idx, title) {
     markers.push(marker);  // 배열에 생성된 마커를 추가합니다
 
     return marker;
+    
+ 
 }
-
+	
 // 지도 위에 표시되고 있는 마커를 모두 제거합니다
 function removeMarker() {
     for ( var i = 0; i < markers.length; i++ ) {
