@@ -115,7 +115,7 @@ input,
 optgroup,
 select,
 textarea {
-  margin: 0;
+  margin: 3px;
   font: inherit;
   color: inherit;
 }
@@ -2262,7 +2262,7 @@ th {
   padding-left: 20px;
 }
 .table {
-  width: 100%;
+  /* width: 100%; */
   max-width: 100%;
   margin-bottom: 20px;
 }
@@ -2519,7 +2519,7 @@ input[type="search"] {
 }
 input[type="radio"],
 input[type="checkbox"] {
-  margin: 4px 0 0;
+  margin: 4px 4px 0;
   margin-top: 1px \9;
   line-height: normal;
 }
@@ -2554,7 +2554,7 @@ output {
   height: 34px;
   padding: 6px 12px;
   font-size: 14px;
-  line-height: 1.42857143;
+/*   line-height: 1.42857143; */
   color: #555;
   background-color: #fff;
   background-image: none;
@@ -3001,7 +3001,7 @@ select[multiple].form-group-lg .form-control {
   line-height: 1.42857143;
   text-align: center;
   white-space: nowrap;
-  vertical-align: middle;
+/*   vertical-align: middle; */
   -ms-touch-action: manipulation;
       touch-action: manipulation;
   cursor: pointer;

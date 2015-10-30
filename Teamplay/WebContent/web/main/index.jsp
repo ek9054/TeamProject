@@ -57,28 +57,25 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			});
 		});
 </script>
-<style type="text/css">
+<script src="web/js/bootstrap.js"></script>
 
-</style>
-<!-- for bootstrap working -->
-		<script src="web/js/bootstrap.js"></script>
-<!-- //for bootstrap working -->
 </head>
 <body>
 	<!--  login -->
 	<div class="container">
-		<div align=right
-			style="margin-right: 30px; margin-top: 30px; font-size: 12px">
+		<div align=right style="margin-top: 30px; font-size: 12px" >
+		 <form method="post" action="#" id="login_frm">
 			<span> ID </span> 
 			<input type="text" name=id id="id" class="form-control"
 				placeholder="@email.com" size=14> 
-			<span>PWD</span> 
+			<span>PW</span> 
 			<input type="text" name=pwd id="pwd" class="form-control" placeholder="password" size=8>
 
 			<button class="btn btn-default" type="button" id="logBtn">로그인</button>
 			<a href="join.do" style="color: black;">
 				<button class="btn btn-default" type="button">회원가입</button>
 			</a>
+		 </form>
 		</div>
 		<div align=right style="margin-right: 30px">
 			<span id="logPrint" ></span>
