@@ -61,9 +61,10 @@ body > #sb-container {
 #sb-body {
   position: relative;
   margin: 0;
-  padding: 0;
+  padding: 10px;
   overflow: hidden;
-  border: 1px solid #303030;
+   border-radius:20px;
+  /* border: 1px solid #303030; */
 }
 #sb-body-inner {
   position: relative;
@@ -84,7 +85,7 @@ body > #sb-container {
   padding-top: 10px;
 }
 #sb-body, #sb-loading {
-  background-color: #060606; /* should match loading image background color */
+  background-color: rgba(154, 40, 40, 0.5); /* should match loading image background color */
 }
 
 /*____________________________________________________________  title & info  */

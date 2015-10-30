@@ -5,7 +5,6 @@
     <servlet-name>mvc</servlet-name>
     <servlet-class>com.controller.DispatcherServlet</servlet-class>
 	<init-param>
-	
 		<param-name>xmlPath</param-name>
 	</init-param>
   </servlet>
