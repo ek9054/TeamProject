@@ -8,6 +8,7 @@
 <link rel="stylesheet" type="text/css" href="web/shadow/css/shadowbox.css"/>
 <script type="text/javascript" src="web/shadow/js/shadowbox.js"></script>
 <script type="text/javascript">
+
 var httpRequest=null;
 function createHttpRequest(){
 	if(window.ActiveXObject){
@@ -35,6 +36,7 @@ function result(){
 		}
 	}
 }
+
 Shadowbox.init({
 	players:["iframe"]
 });
@@ -96,9 +98,12 @@ function nutirition()
      
     </tr>
     <tr>
+
     	
-    	  <buttton value="영양정보" onclick="nutirition()" ><img src="web/images/info.jpg" width=50 height=50></buttton>
-   	</tr>
+
+      <buttton value="영양정보" onclick="nutirition()" ><img src="web/images/info.jpg" width=50 height=50></buttton>
+   
+   </tr>
    </table>
  </center>
 </body>
