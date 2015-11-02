@@ -17,73 +17,73 @@
             </div>
       <div class="blog-post-grids">
          <div class="blog-post">
-               <a href="single.html"><img src="web/images/b1.jpg" class="img-responsive" alt="  "></a>
+               <a href=""><img src="web/images/b1.jpg" class="img-responsive" alt="  "></a>
                <div class="text">
-                  <a href="single.html"> Aliquam erat volutpat</a>
+                  <a href=""> Aliquam erat volutpat</a>
                </div>
                <div class="admin-tag">
-               <p>Posted by <a href="single.html">Admin</a> in <a href="#">General</a> | <a href="single.html">10 Comments</a></p>
+               <p>Posted by <a href="">Admin</a> in <a href="#">General</a> | <a href="">10 Comments</a></p>
                
-               <a href="single.html" class="hvr-shutter-in-horizontal more">Readmore<span> </span></a>
+               <a href="" class="hvr-shutter-in-horizontal more">Readmore<span> </span></a>
                </div>
          </div>
          <div class="blog-post">
-               <a href="single.html"><img src="web/images/b2.jpg" class="img-responsive" alt="  "></a>
+               <a href=""><img src="web/images/b2.jpg" class="img-responsive" alt="  "></a>
                <div class="text">
-                  <a href="single.html"> Aliquam erat volutpat</a>
+                  <a href=""> Aliquam erat volutpat</a>
                </div>
                <div class="admin-tag">
-               <p>Posted by <a href="single.html">Admin</a> in <a href="#">General</a> | <a href="single.html">10 Comments</a></p>
+               <p>Posted by <a href="">Admin</a> in <a href="#">General</a> | <a href="">10 Comments</a></p>
 
-               <a href="single.html" class="hvr-shutter-in-horizontal more">Readmore<span> </span></a>
+               <a href="" class="hvr-shutter-in-horizontal more">Readmore<span> </span></a>
                </div>
          </div>
       </div>
       <div class="blog-post-grids">
          <div class="blog-post">
-            <a href="single.html"><img src="web/images/b3.jpg" class="img-responsive" alt="  "></a>
+            <a href=""><img src="web/images/b3.jpg" class="img-responsive" alt="  "></a>
             <div class="text">
-               <a href="single.html"> Aliquam erat volutpat</a>
+               <a href=""> Aliquam erat volutpat</a>
             </div>
             <div class="admin-tag">
-            <p>Posted by <a href="single.html">Admin</a> in <a href="#">General</a> | <a href="single.html">10 Comments</a></p>
+            <p>Posted by <a href="">Admin</a> in <a href="#">General</a> | <a href="">10 Comments</a></p>
             
-            <a href="single.html" class="hvr-shutter-in-horizontal more">Readmore<span> </span></a>
+            <a href="" class="hvr-shutter-in-horizontal more">Readmore<span> </span></a>
             </div>
          </div>
          <div class="blog-post">
-            <a href="single.html"><img src="web/images/b4.jpg" class="img-responsive" alt="  "></a>
+            <a href=""><img src="web/images/b4.jpg" class="img-responsive" alt="  "></a>
             <div class="text">
-               <a href="single.html"> Aliquam erat volutpat</a>
+               <a href=""> Aliquam erat volutpat</a>
             </div>
             <div class="admin-tag">
-            <p>Posted by <a href="single.html">Admin</a> in <a href="#">General</a> | <a href="single.html">10 Comments</a></p>
+            <p>Posted by <a href="">Admin</a> in <a href="#">General</a> | <a href="">10 Comments</a></p>
             
-            <a href="single.html" class="hvr-shutter-in-horizontal more">Readmore<span> </span></a>
+            <a href="" class="hvr-shutter-in-horizontal more">Readmore<span> </span></a>
             </div>
          </div>
       </div>
       <div class="blog-post-grids">
          <div class="blog-post">
-            <a href="single.html"><img src="web/images/b4.jpg" class="img-responsive" alt="  "></a>
+            <a href=""><img src="web/images/b4.jpg" class="img-responsive" alt="  "></a>
             <div class="text">
-               <a href="single.html"> Aliquam erat volutpat</a>
+               <a href=""> Aliquam erat volutpat</a>
             </div>
             <div class="admin-tag">
-            <p>Posted by <a href="single.html">Admin</a> in <a href="#">General</a> | <a href="single.html">10 Comments</a></p>
+            <p>Posted by <a href="">Admin</a> in <a href="#">General</a> | <a href="">10 Comments</a></p>
             
-            <a href="single.html" class="hvr-shutter-in-horizontal more">Readmore<span> </span></a>
+            <a href="" class="hvr-shutter-in-horizontal more">Readmore<span> </span></a>
             </div>
          </div>
          <div class="blog-post">
-            <a href="single.html"><img src="web/images/b1.jpg" class="img-responsive" alt="  "></a>
+            <a href=""><img src="web/images/b1.jpg" class="img-responsive" alt="  "></a>
             <div class="text">
-               <a href="single.html"> Aliquam erat volutpat</a>
+               <a href=""> Aliquam erat volutpat</a>
             </div>
             <div class="admin-tag">
-            <p>Posted by <a href="single.html">Admin</a> in <a href="#">General</a> | <a href="single.html">10 Comments</a></p>
+            <p>Posted by <a href="">Admin</a> in <a href="#">General</a> | <a href="">10 Comments</a></p>
             
-            <a href="single.html" class="hvr-shutter-in-horizontal more">Readmore<span> </span></a>
+            <a href="" class="hvr-shutter-in-horizontal more">Readmore<span> </span></a>
             </div>
          </div>
       </div>

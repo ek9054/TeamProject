@@ -24,6 +24,7 @@ $RECYCLE.BIN/
 *.lnk
 
 
+
 ### Eclipse ###
 *.pydevproject
 .metadata
@@ -64,3 +65,7 @@ local.properties
 
 # TeXlipse plugin
 .texlipse
+
+# temp_web.xml
+C:/Users/sist/git/TeamProject/Teamplay/WebContent/WEB-INF/web.xml
+
