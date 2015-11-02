@@ -8,6 +8,7 @@
 <link rel="stylesheet" type="text/css" href="web/shadow/css/shadowbox.css"/>
 <script type="text/javascript" src="web/shadow/js/shadowbox.js"></script>
 <script type="text/javascript">
+
 var httpRequest=null;
 function createHttpRequest(){
 	if(window.ActiveXObject){
@@ -35,6 +36,7 @@ function result(){
 		}
 	}
 }
+
 Shadowbox.init({
 	players:["iframe"]
 });
@@ -52,22 +54,30 @@ function nutirition()
 </head>
 <body>
  <center>
-  
-  <h3>버거만들기</h3>
-  <p>
-		<input type=button value="기존버거" onclick="sendMessage(10)">
-		<input type=button value="step1. 번 선택하기" onclick="sendMessage(20)">
-		<input type=button value="step2. 패티 선택하기" onclick="sendMessage(30)">
-		<input type=button value="step3. 치즈 더하기" onclick="sendMessage(40)">
-		<input type=button value="step4. 채소 추가하기" onclick="sendMessage(50)">
-		<input type=button value="step5. 소스 선택하기" onclick="sendMessage(60)">
-		<input type=button value="step6. 프리미엄 토핑하기" onclick="sendMessage(70)">
-		
-		<p>
+  <br>
+  <br>
+  <h2 class="heading text-center">make burger</h2>
+  <br>
+  <br>
+  	<form>
+		<input type=button class="form-control" value="기존버거" onclick="sendMessage(10)">
+		<input type=button class="form-control" value="step1. 번 선택하기" onclick="sendMessage(20)">
+		<input type=button class="form-control" value="step2. 패티 선택하기" onclick="sendMessage(30)">
+		<input type=button class="form-control" value="step3. 치즈 더하기" onclick="sendMessage(40)">
+		<input type=button class="form-control" value="step4. 채소 추가하기" onclick="sendMessage(50)">
+		<br>
+		<input type=button class="form-control" value="step5. 소스 선택하기" onclick="sendMessage(60)">
+		<input type=button class="form-control" value="step6. 프리미엄 토핑하기" onclick="sendMessage(70)">
+		<input type=button class="form-control" value="step7. 사이드 메뉴" onclick="sendMessage(80)">
+	</form>	
+		<br>
+		<br>
 		
 		<div id="materialPrint"></div>
-  <p>
-   <table border=0 width=500>
+		<hr width=800 color="red">
+        <buttton value="영양정보" onclick="nutirition()" ><img src="web/images/info.jpg" width=50 height=50></buttton>
+  		
+   <!-- <table border=0 width=500>
     <tr>
      <td align=center>
       <a href=""><img src="web/image/1955fire.png" border=0 width=300>&nbsp;B&B 파이어</a></td>
@@ -96,10 +106,10 @@ function nutirition()
      
     </tr>
     <tr>
-    	
-    	  <buttton value="영양정보" onclick="nutirition()" ><img src="web/images/info.jpg" width=50 height=50></buttton>
-   	</tr>
-   </table>
+
+   
+   </tr>
+   </table> -->
  </center>
 </body>
 </html>

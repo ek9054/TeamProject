@@ -5,36 +5,100 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="post.css"/>
+<link href="../css/bootstrap.css" rel='stylesheet' type='text/css'/>
+<script src="../js/jquery.min.js"></script>
+<!-- <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" /> -->
+<script src="../js/bootstrap.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
 <script type="text/javascript">
-function postfind()
+var httpRequest=null;
+function createHttpRequest()
 {
-	var f=document.post_frm;
-	if(f.dong.value=="")
+	if(window.ActiveXObject) // IE 6.0이상
 	{
-		alert("동/읍/면을 입력하세요");
-		f.dong.focus()
+		return new ActiveXObject("Msxml2.XMLHTTP");
+		// Microsoft.XMLHTTP
+	}
+	else if(window.XMLHttpRequest) // 크롬,ff
+	{
+		return new XMLHttpRequest();
+	}
+	else
+	{
+		return null;// 지원하지 않는 브라우저
+	}
+}
+function sendMessage(method,param,url,callback)
+{
+	// 서버연결 DWR,DOJO
+	httpRequest=createHttpRequest();
+	httpRequest.open(method,url+param,true);
+	// true: 비동기, false:동기
+	httpRequest.onreadystatechange=callback;
+	httpRequest.send(null);
+}
+function postFind_result()
+{
+	if(httpRequest.readyState==4)
+	{
+		if(httpRequest.status==200)
+		{
+			$('#postPrint').html(httpRequest.responseText);
+		}
+	}
+}
+function postFind()
+{
+	var param=$('#dong').val();
+	/* alert(param); */
+	if(param=="")
+	{
+		$('#dong').focus();
+		$('#result').text("동/읍/면을 입력하세요");
 		return;
 	}
-	f.submit();
-	
+	param="?dong="+param;
+	sendMessage('GET',param,"../../postFind.do",postFind_result);
 }
+function postOk(zip, addr)
+{
+	parent.join_frm.post.value=zip;
+	parent.join_frm.addr1.value=addr;
+	parent.Shadowbox.close();
+}
+$(function(){
+		$('#postFindBtn').click(function(){
+			postfind();
+		});
+});
+
 </script>
+<style type="text/css">
+body{
+	color:white;
+}
+a{
+	color:white;
+} 
+a:Hover, a:focus {
+	text-decoration: none;
+	text-transform: none;
+}
+</style>
 </head>
-<body>
-	<div id="post_wrapper">
-		<form id="postForm" name="post_frm" method=post action="postfind_result.jsp">
-			<p>
-				<label for="userdong">입력</label>
-				<input type=text id="userdong" name="dong">
-				<input type=button id="userdongBtn" value="찾기" onclick="postfind()">
+	<body>	
+	<center>
+		<form id="postForm" name="post_frm" method=post action="postFind_result.jsp">
+			<p align=center>
+			    <label for="userdong">입력 : </label>
+				<input type=text id="dong" name="dong" class="form-control">
+				<input type="button" id="postFindBtn" value="찾기" onclick="postFind()" class="btn btn-default">
 			</p>
-			<p>
-				<label></label>
-				<span style="text-align:right">동/읍/면을 입력하세요</span>
+			<p align=center>
+				<span id="result">동/읍/면을 입력하세요</span>
 			</p>
 			<span id="postPrint"></span>
 		</form>
-	</div>
-</body>
+	</body>
+	</center>
 </html>

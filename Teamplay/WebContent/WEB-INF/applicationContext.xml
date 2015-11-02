@@ -10,6 +10,11 @@
 	<bean id="store" class="com.store.model.StoreModel"/>
 	<bean id="recommend" class="com.recommend.model.RecommendModel"/>
 	<bean id="menu" class="com.menu.model.MenuModel"/>
+	<!--  회원 관련 -->
 	<bean id="join" class="com.join.model.JoinModel"/>
+	<bean id="login" class="com.member.model.MemberLoginModel"/>
+	<bean id="logout" class="com.member.model.MemberLogoutModel"/>
+	<bean id="idcheck" class="com.member.model.IdCheckModel"/>
+	<bean id="postFind" class="com.member.model.PostFindModel"/>
 </beans> <!-- endElement() -->
 <!-- endDocument() : 문서가 종료 -->
