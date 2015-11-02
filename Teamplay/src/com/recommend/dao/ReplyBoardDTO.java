@@ -11,6 +11,21 @@ public class ReplyBoardDTO {
    private int brec;
    private String bfilename;
    private Date bregdate;
+   private String dbday;
+   private int replyCount;
+   
+public String getDbday() {
+	return dbday;
+}
+public void setDbday(String dbday) {
+	this.dbday = dbday;
+}
+public int getReplyCount() {
+	return replyCount;
+}
+public void setReplyCount(int replyCount) {
+	this.replyCount = replyCount;
+}
 public int getHno() {
 	return hno;
 }
