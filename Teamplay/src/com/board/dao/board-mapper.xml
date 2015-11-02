@@ -40,12 +40,13 @@
         }
     -->
     <select id="boardListData" resultType="Board" parameterType="java.util.Map">
-      SELECT no,subject,name, dbday , hit, num
-      FROM (SELECT no,subject,name, TO_CHAR(regdate,'YYYY-MM-DD') as dbday , hit, rownum as num
-      FROM (SELECT no,subject,name, regdate , hit 
-      FROM replyBoard ORDER BY no DESC)) 
-      WHERE num BETWEEN #{start} AND #{end}
+    	SELECT bno,bsub,bname,dbday,bfilename,brec,num
+    	FROM (SELECT bno,bsub,bname,TO_CHAR(regdate,'YYYY-MM-DD') as dbday ,bfilename,brec,rownum as num
+    	FROM(SELECT bno,bsub,bname,regdate,bfilename,brec
+    	FROM pboard ORDER BY bno DESC))
+    	WHERE num BETWEEN #{start} AND #{end} 
     </select>
+   
     <!-- 총페이지 구하기 -->
     <select id="boardRowCount" resultType="int">
       SELECT COUNT(*) FROM replyBoard

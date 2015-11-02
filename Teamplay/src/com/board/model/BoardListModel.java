@@ -16,20 +16,21 @@ public class BoardListModel implements Model{
 		      strPage ="1";
 		   }
 		   int curpage = Integer.parseInt(strPage);
-		   int rowSize=10;
+		   int rowSize=9;
 		   int totalpage = ReplyBoardDAO.boardTotalPage();
 		   int start=(curpage*rowSize)-(rowSize-1);
 		   int end=(curpage*rowSize);
+		   int num = end- start+1;
+		   
 		   Map map = new HashMap();
 		   map.put("start", start); // #{start} get("start")
 		   map.put("end", end);
 		   List<ReplyBoardDTO> list=ReplyBoardDAO.boardListData(map);
-		   for(ReplyBoardDTO d:list)
-		   {
-			   d.setReplyCount(ReplyBoardDAO.boardReplyCount(d.getBno()));
-		   }
+		  
 		   req.setAttribute("today", new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
 		   req.setAttribute("list", list);
+		   req.setAttribute("row", num/3);
+		   req.setAttribute("col", num%3);
 		   req.setAttribute("curpage", curpage);
 		   req.setAttribute("totalpage", totalpage);
 		   req.setAttribute("title", "자유 게시판");

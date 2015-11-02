@@ -37,6 +37,7 @@ public class ReplyBoardDAO {
 	   }
    }
    // 데이터 가지고 오기 
+   
    public static List<ReplyBoardDTO> boardListData(Map map)
    {
 	   List<ReplyBoardDTO> list=
@@ -67,7 +68,7 @@ public class ReplyBoardDAO {
 	   {
 		   session=ssf.openSession();
 		   int count=session.selectOne("boardRowCount");
-		   total=(int)(Math.ceil(count/10.0));
+		   total=(int)(Math.ceil(count/9.0));
 	   }catch(Exception ex)
 	   {
 		   System.out.println(ex.getMessage());
