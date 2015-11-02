@@ -1,4 +1,4 @@
-package com.recommend.model;
+package com.board.model;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

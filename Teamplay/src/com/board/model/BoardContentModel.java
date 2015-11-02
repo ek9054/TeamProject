@@ -1,4 +1,4 @@
-package com.recommend.model;
+package com.board.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.common.Model;
-import com.recommend.dao.*;
+import com.board.dao.*;
 public class BoardContentModel implements Model {
 
 	@Override

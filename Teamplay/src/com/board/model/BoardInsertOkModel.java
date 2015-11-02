@@ -1,10 +1,10 @@
-package com.recommend.model;
+package com.board.model;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.recommend.dao.ReplyBoardDAO;
-import com.recommend.dao.ReplyBoardDTO;
+import com.board.dao.ReplyBoardDAO;
+import com.board.dao.ReplyBoardDTO;
 import com.common.Model;
 
 public class BoardInsertOkModel implements Model{

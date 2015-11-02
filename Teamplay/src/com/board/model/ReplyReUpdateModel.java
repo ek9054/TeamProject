@@ -1,11 +1,11 @@
-package com.recommend.model;
+package com.board.model;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.recommend.dao.ReplyBoardDAO;
-import com.recommend.dao.ReplyDTO;
+import com.board.dao.ReplyBoardDAO;
+import com.board.dao.ReplyDTO;
 import com.common.Model;
 
 public class ReplyReUpdateModel implements Model {

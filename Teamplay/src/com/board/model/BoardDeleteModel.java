@@ -1,4 +1,4 @@
-package com.recommend.model;
+package com.board.model;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -10,7 +10,7 @@ import com.common.Model;
  						 => handlerRequest() <=> DB (mapper:SQL)=>DAO
  						 => jspÃâ·Â 
  */
-import com.recommend.dao.*;
+import com.board.dao.*;
 public class BoardDeleteModel implements Model {
 
 	@Override

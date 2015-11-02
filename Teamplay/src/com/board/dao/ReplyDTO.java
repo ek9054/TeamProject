@@ -1,4 +1,4 @@
-package com.recommend.dao;
+package com.board.dao;
 import java.util.*;
 public class ReplyDTO {
 	private int no;
