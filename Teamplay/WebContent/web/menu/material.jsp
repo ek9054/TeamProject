@@ -4,7 +4,7 @@
 <jsp:useBean id="dao" class="com.menu.dao.MenuDAO"/>
 <%
 	String tno=request.getParameter("tno");
-	ArrayList<MenuDTO> list= dao.menuFindData(Integer.parseInt(tno));
+	List<MenuDTO> list= MenuDAO.menuListData(Integer.parseInt(tno));	
 %>
 <c:set var="list" value="<%=list %>"/>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">

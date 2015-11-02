@@ -5,9 +5,10 @@
 	disConnection()
  -->
 <configuration>
-	<properties resource="com/dao/db.properties"/>
+	<properties resource="com/menu/dao/db.properties"/>
 	<typeAliases>
-		<typeAlias type="com.dao.BoardDTO" alias="Board"/>
+		
+		<typeAlias type="com.menu.dao.MenuDTO" alias="Menu"/>
 		
 	</typeAliases>
 	<environments default="development">
@@ -22,6 +23,7 @@
 		</environment>
 	</environments>
 	<mappers>
-		<mapper resource="com/board/dao/board-mapper.xml"/>
+		
+		<mapper resource="com/menu/dao/menu-mapper.xml"/>
 	</mappers>
 </configuration>
