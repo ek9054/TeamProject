@@ -90,9 +90,9 @@ a:Hover, a:focus {
 	<center>
 		<form id="postForm" name="post_frm" method=post action="postFind_result.jsp">
 			<p align=center>
-				<label for="userdong">입력 : </label>
+			    <label for="userdong">입력 : </label>
 				<input type=text id="dong" name="dong" class="form-control">
-				<input type=button id="postFindBtn" value="찾기" onclick="postFind()" class="btn btn-default">
+				<input type="button" id="postFindBtn" value="찾기" onclick="postFind()" class="btn btn-default">
 			</p>
 			<p align=center>
 				<span id="result">동/읍/면을 입력하세요</span>
