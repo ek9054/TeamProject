@@ -99,8 +99,6 @@ function nutirition()
     </tr>
     <tr>
 
-    	
-
       <buttton value="영양정보" onclick="nutirition()" ><img src="web/images/info.jpg" width=50 height=50></buttton>
    
    </tr>
