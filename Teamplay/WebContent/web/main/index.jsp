@@ -36,26 +36,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				}, 900);
 			});
 		});
-		$(function() {
-			// onclick
-			//var id=$('#id').val("admin");	// val() : 값 읽어들이기 , val("값") 값 넣기  / #id .class 태그명 (셀렉터).val()
-			$('#logBtn').click(function() {
-				var id = $('#id').val();
-				if (id == "") {
-					$('#logPrint').text("ID를 입력하세요");
-					$('#id').focus();
-					return;
-				}
-				var pwd = $('#pwd').val();
-				if (pwd == "") {
-					$('#logPrint').text("Password를 입력하세요");
-					$('#pwd').focus();
-					return;
-				}
 
-				$('frm').submit();
-			});
-		});
 </script>
 <script src="web/js/bootstrap.js"></script>
 
@@ -63,24 +44,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <body>
 	<!--  login -->
 	<div class="container">
-		<div align=right style="margin-top: 30px; font-size: 12px" >
-		 <form method="post" action="#" id="login_frm">
-			<span> ID </span> 
-			<input type="text" name=id id="id" class="form-control"
-				placeholder="@email.com" size=14> 
-			<span>PW</span> 
-			<input type="text" name=pwd id="pwd" class="form-control" placeholder="password" size=8>
-
-			<button class="btn btn-default" type="button" id="logBtn">로그인</button>
-			<a href="join.do" style="color: black;">
-				<button class="btn btn-default" type="button">회원가입</button>
-			</a>
-		 </form>
-		</div>
-		<div align=right style="margin-right: 30px">
-			<span id="logPrint" ></span>
-		</div>
+	   <span>
+	   <c:if test="${sessionScope.id==null }">
+		<jsp:include page="../join/login.jsp"></jsp:include>
+	  </c:if>
+	  <c:if test="${sessionScope.id!=null }">
+		<jsp:include page="../join/logout.jsp"></jsp:include>
+		</c:if>
+	   </span>
 	</div>
+	
+	
 	<!-- header-section-starts -->	
 			<div class="header-top">
 			<div class="logo text-center">

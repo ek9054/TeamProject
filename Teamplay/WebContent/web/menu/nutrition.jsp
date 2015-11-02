@@ -14,7 +14,9 @@ td{
 <body>
 	<center>
 	 	<table>
+
 		   	<tr border=1 bgcolor=#999>
+
 		    	<th>메뉴명</th>
 		    	<th>중량(g/ml)</th>
 		    	<th>열량(kcal)</th>
