@@ -1,12 +1,42 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="web/shadow/css/shadowbox.css"/>
+<script type="text/javascript" src="web/shadow/js/shadowbox.js"></script>
+<script type="text/javascript">
+Shadowbox.init({
+	players:["iframe"]
+});
+
+
+function postFind()
+{
+	Shadowbox.open({
+		content:'web/join/postfind.jsp',
+		player:'iframe',
+		title:'¿ìÆí¹øÈ£ Ã£±â',
+		width:450,
+		height:350
+	});
+}
+function idFind()
+{
+	Shadowbox.open({
+		content:'web/join/idcheck.jsp',
+		player:'iframe',
+		title:'¾ÆÀÌµğÃ£±â',
+		width:300,
+		height:200
+	});
+}
+</script>
 </head>
 <body>
+	<div class="container">
 	<form method=post action="">
 		<center>
 		<br>
@@ -14,91 +44,99 @@
 		<h2 class="heading text-center">Join </h2>
 		<br>
 		<br>
-		
-		<table border=0 width=350 height=400>
-			<tr>
-				<td width=20%><p class=your-para>ì•„ì´ë””</p></td>
-				<td width=80% align=left class="send" >
-					<input type=text name=id size=16>
-					<input type=button name=idcheck value=ì¤‘ë³µì²´í¬ >
+		<table class="table" border="0" width="500" height="550">
+			<tbody><tr>
+				<td width="20%"><p class="your-para">¾ÆÀÌµğ</p></td>
+				<td width="80%" align="left" class="send">
+					<input type="text" name="id" size="20" readonly class="form-control" placeholder="@email.com">
+					<input type="button" name="idcheck" value="Áßº¹Ã¼Å©" class="btn btn-default" onclick="idFind()">
 				</td>
 				
 			</tr>
 			<tr>
-				<td width=20%><p class=your-para>ë¹„ë°€ë²ˆí˜¸</p></td>
-				<td width=80% align=left>
-					<input type=password name=pwd size=30>
+				<td width="20%" rowspan="2"><p class="your-para">ºñ¹Ğ¹øÈ£</p></td>
+				<td width="80%" align="left">
+					<input type="password" name="pwd" size="35" class="form-control">
 					
 				</td>
 			</tr>
 			<tr>
-				<td width=20%><p class=your-para></p></td>
-				<td width=80%align=left>
-					<input type=password name=pwd2 size=30 placeholder=ì¬ì…ë ¥>
+				
+				<td width="80%" align="left">
+					<input type="password" name="pwd2" size="35" placeholder="ÀçÀÔ·Â" class="form-control">
 				</td>
 			</tr>
 			<tr>
-				<td width=20%><p class=your-para>ì´ë¦„</p></td>
-				<td width=80% align=left>
-					<input type=text name=name size=12>
+				<td width="20%"><p class="your-para">ÀÌ¸§</p></td>
+				<td width="80%" align="left">
+					<input type="text" name="name" size="35" class="form-control">
 				</td>
 			</tr>
 			<tr>
-				<td width=20%><p class=your-para>ìƒë…„ì›”ì¼</p></td>
-				<td width=80% align=left>
-					<input type=date name="bday">
+				<td width="20%"><p class="your-para">»ı³â¿ùÀÏ</p></td>
+				<td width="80%" align="left">
+					<input type="date" name="bday" class="form-control">
 				</td>
 			</tr>
 			<tr>
-				<td width=30%><p class=your-para>ì„±ë³„</p></td>
-				<td width=70% align=left>
-					<input type=radio name=sex value=ë‚¨ì checked>ë‚¨ì
-					<input type=radio name=sex value=ì—¬ì >ì—¬ì
+				<td width="30%"><p class="your-para">¼ºº°</p></td>
+				<td width="70%" align="left">
+				<input class="btn btn-default dropdown-toggle" type="radio" name="sex" value="³²ÀÚ" checked="">³²ÀÚ
+					<input type="radio" name="sex" value="¿©ÀÚ">¿©ÀÚ
 				</td>
 			</tr>
+			
 			<tr>
-				<td width=20%><p class=your-para>ìš°í¸ë²ˆí˜¸</p></td>
-				<td width=80% align=left>
-					<input type=text id="userpost" name="post" readonly size=10>
-					<input type=button value="ìš°í¸ë²ˆí˜¸ ê²€ìƒ‰" name=postfind>
+				<td width=20%><p class=your-para>ÀüÈ­¹øÈ£</p></td>
+				<td width=80% align=left >
+					<input type=text id="usertel1" name="tel1" size=6 class="form-control">- 
+    			    <input type=text id="usertel2" name="tel2" size=7 class="form-control">-
+					<input type=text id="usertel3" name="tel3" size=7 class="form-control">
+				</td>
+			</tr>
+			
+			<tr>
+				<td width="20%"><p class="your-para">¿ìÆí¹øÈ£</p></td>
+				<td width="80%" align="left">
+					<input type="text" id="userpost" name="post" size="15" readonly class="form-control">
+					<input type="button" value="¿ìÆí¹øÈ£ °Ë»ö" name="postfind" onclick="postFind()" class="btn btn-default" >
 					
 				</td>
 			</tr>
+			
+			
+			
 			<tr>
-				<td width=20%><p class=your-para>ì£¼ì†Œ</p></td>
+				<td width="20%" rowspan="2"><p class="your-para">ÁÖ¼Ò</p></td>
 				<td>
-					<input type=text id="useraddr1" name="addr1" readonly size=30>
-					<input type=text id="useraddr2" name="addr2" size=30>
+					<input type="text" id="useraddr1" name="addr1" size="35" readonly class="form-control">
 				</td>
 			</tr>
 			<tr>
-				<td width=20%><p class=your-para>ì „í™”ë²ˆí˜¸</p></td>
-				<td width=80% align=left>
-				<select id="usertel" name="tel1">
-						<option>010</option>
-						<option>011</option>
-						<option>017</option>
-					</select>
-					<input type=text id="usertel2" name="tel2" size=10>-
-					<input type=text id="usertel3" name="tel3" size=10>
+				<td>
+					<input type="text" id="useraddr2" name="addr2" size="35" class="form-control">
 				</td>
 			</tr>
 			<tr>
-				<td width=20%><p class=your-para>ì´ë©”ì¼</p></td>
-				<td width=80% align=left>
-					<input type=text name=email size=30>
-				</td>
-			</tr>
-			<tr>
-				<td class="send" colspan=3 align=center >
+				<td class="send" colspan="3" align="center">
 					<br>
-					<input type="submit" value=ê°€ì…í•˜ê¸° >
+					<input type="submit" value="°¡ÀÔÇÏ±â">
+				</td>
+			</tr> 
+			
+		
+			<!-- <tr>
+				<td width="20%"><p class="your-para">ÀÌ¸ŞÀÏ</p></td>
+				<td width="80%" align="left">
+					<input type="text" name="email" size="35" class="form-control">
 				</td>
 			</tr>
-		</table>
-		
+			-->
+		</tbody></table>
+
 		
 		</center>
 	</form>
+	</div>
 </body>
 </html>
