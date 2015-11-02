@@ -3,14 +3,15 @@
   <display-name>MVCProject</display-name>
   <servlet>
     <servlet-name>mvc</servlet-name>
-
-
     <servlet-class>com.controller.DispatcherServlet</servlet-class>
-    <init-param>
-
-      <param-name>xmlPath</param-name>
-		<param-value>C:\Users\sist\Git\Teamplay\Teamplay\WebContent\WEB-INF\applicationContext.xml</param-value>
+	<init-param>
+		<param-name>xmlPath</param-name>
+		
 	</init-param>
+
+
+
+   
   </servlet>
   <servlet-mapping>
     <servlet-name>mvc</servlet-name>
